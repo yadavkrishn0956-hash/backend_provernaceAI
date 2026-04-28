@@ -1,0 +1,10 @@
+.next
+node_modules
+.venv
+.venv-live
+.venv-live-managed
+.codex-logs
+.uv-cache
+.uv-python
+.qodo
+frontend_proveranceAI

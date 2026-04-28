@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAFBFF] text-slate-900 antialiased;
+  }
+}
+
+/* ── Diagonal Shining Wave ── */
+.wave-shine {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 38%,
+    rgba(99, 102, 241, 0.035) 43%,
+    rgba(139, 92, 246, 0.055) 50%,
+    rgba(99, 102, 241, 0.035) 57%,
+    transparent 62%,
+    transparent 100%
+  );
+  animation: shineWave 14s ease-in-out infinite;
+}
+
+/* ── Ambient Glow Blobs ── */
+.wave-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  will-change: transform;
+}
+
+.wave-glow-1 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.07), transparent 70%);
+  top: -250px;
+  left: -250px;
+  animation: floatBlob1 22s ease-in-out infinite;
+}
+
+.wave-glow-2 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.055), transparent 70%);
+  bottom: -200px;
+  right: -200px;
+  animation: floatBlob2 28s ease-in-out infinite;
+}
+
+@keyframes shineWave {
+  0%   { transform: translate(-25%, -25%); }
+  50%  { transform: translate(5%, 5%); }
+  100% { transform: translate(-25%, -25%); }
+}
+
+@keyframes floatBlob1 {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(50px, 60px); }
+}
+
+@keyframes floatBlob2 {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(-40px, -50px); }
+}

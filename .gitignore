@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.env
+.env.local
+backend/data/
+backend/keys/
+node_modules/
+dist/
+.codex-logs/
+.uv-cache/
+.uv-python/
+.venv/
+.venv-live/
+.venv-live-managed/
+.next/
+.qodo/
